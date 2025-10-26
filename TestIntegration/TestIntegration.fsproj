@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <UserSecretsId>a510b19c-3433-4ae8-9ce5-2e805adfc847</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Api.fs" />
+    <Compile Include="Tools.fs" />
+    <Compile Include="Models.fs" />
+    <Compile Include="ProductService.fs" />
+    <Compile Include="templates\shared\layout.fs" />
+    <Compile Include="templates\success.fs" />
+    <Compile Include="templates\index.fs" />
+    <Compile Include="Handlers.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Dockerfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FsHttp" Version="15.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0-preview.4" />
+    <PackageReference Include="Oxpecker" Version="1.4.0" />
+    <PackageReference Include="Oxpecker.Htmx" Version="1.0.1" />
+  </ItemGroup>
+
+</Project>
